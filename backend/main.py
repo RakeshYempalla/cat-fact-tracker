@@ -21,7 +21,11 @@ class CatFact(BaseModel):
 @app.get("/catfacts")
 def get_cat_facts():
     facts = get_all_facts()
-    return {"cat_facts": facts} 
+    # extract only the fact text (index 1 in each row)
+    fact_list = [fact[1] for fact in facts]
+    return {"cat_facts": fact_list}
+
+
 @app.get("/catfacts/random")
 def get_random_cat_facts():
     fact = get_random_fact()
@@ -29,6 +33,7 @@ def get_random_cat_facts():
         return{"fact":fact}
     else:
         return{"result":"No cat fact available"}
+
 @app.post("/catfacts")
 def add_cat_fact(cat_fact: CatFact):  
     try:

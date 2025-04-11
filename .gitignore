@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+*.sqlite3
+cat_facts.db
+
+# Node
+node_modules/
+.cache/
+
+# System
+.DS_Store
+.env

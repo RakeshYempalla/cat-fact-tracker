@@ -7,7 +7,9 @@ function RandomCatFact() {
   useEffect(() => {
     const fetchRandomFact = async () => {
       const fact = await getRandomCatFact();
-      setRandomFact(fact);
+      if (fact) {
+        setRandomFact(fact);
+      }
     };
     fetchRandomFact();
   }, []);
@@ -15,7 +17,11 @@ function RandomCatFact() {
   return (
     <div>
       <h2>Random Cat Fact</h2>
-      <p>{randomFact}</p>
+      {randomFact ? (
+        <p>{randomFact}</p>
+      ) : (
+        <p>Loading random cat fact...</p>
+      )}
     </div>
   );
 }

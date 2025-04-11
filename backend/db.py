@@ -1,6 +1,7 @@
 import sqlite3
 
-DB_NAME = "cat_facts.db"
+import os
+DB_NAME = os.path.join(os.path.dirname(__file__), "cat_facts.db")
 
 def connect_db():
     # connecting to SQLite DB and returning the connecting object to interact with DB
