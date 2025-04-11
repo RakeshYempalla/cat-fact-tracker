@@ -38,7 +38,7 @@ This is a full-stack project built as part of a new hire intro assignment. The g
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/cat-fact-tracker.git
+git clone https://github.com/RakeshYempalla/cat-fact-tracker.git
 cd cat-fact-tracker
 
 ### 2. Backend Setup (FastAPI)
