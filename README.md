@@ -60,7 +60,8 @@ Start FastAPI server
 >npm start
 
 ## Trouble shooting issues :
-Backend : ERROR:    [Errno 48] Address already in use . Find the proces and kill the process id
+Backend : ERROR:    [Errno 48] Address already in use .
+Find the proces and kill the process id
 > lsof -i : PORT_NUMBER         (to find the pid)
 > kill -9 PID
 Frontend : Warning: " Something is already running on port"
